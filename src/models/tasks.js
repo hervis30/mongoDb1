@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const TaskSchema = Schema({
   title: String,
   description: String,
-  deadLine:String,
+  deadline:String,
   status: {
     type: Boolean,
     default: false
