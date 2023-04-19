@@ -1,14 +1,18 @@
 
 
 //El módulo path proporciona utilidades para trabajar con rutas de archivos y directorios
-const path = require('path');
+const path=require('path')
+//import path from 'path';
 const express = require('express');
+//import { Express } from 'express';
 /*
 Manejo de middleware con express
 npm install morgan --save
 Morgan es un modulo (middleware) que permite mostrar por consola lo que las aplicaciones clientes van pidiendo
 */
+//import morgan from 'morgan';
 const morgan = require('morgan');
+
 /*
 Mongoose es una biblioteca de JavaScript que le permite definir esquemas con datos 
 fuertemente tipados. Una vez que se define un esquema, 
@@ -17,6 +21,8 @@ Un modelo de mongoose se asigna a un documento MongoDB a través de la
 definición del esquema del modelo.
 Instalación: npm install mongoose --save
  */
+
+//import mongoose from 'mongoose';
 const mongoose = require('mongoose');
 
 const app = express();
@@ -28,6 +34,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/dbtasks')
   .catch(err => console.log(err));
 
 // Importando rutas
+
+//import indexRoutes from './routes/index';
 const indexRoutes = require('./routes/index');
 
 // Configuración de variables a través de app.set (settings)

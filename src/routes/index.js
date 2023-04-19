@@ -1,7 +1,7 @@
 const express=require('express')
 const router=express.Router();
 //UTILIZAR EL ARCHIVO tasks.s (esquema) que se encuentra en src/models/tasks.js
-const Task=require('../models/tasks');
+const Task = require('../models/tasks');
 
 //Rutas o EndPoints
 
