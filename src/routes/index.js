@@ -40,14 +40,14 @@ router.get('/', async (req, res) => {
   //Editar la info de la tarea
   router.post('/edit/:id', async (req, res, next) => {
     const { id } = req.params;
-    await Task.update({_id: id}, req.body);
+    await Task.updateOne({_id: id}, req.body);
     res.redirect('/');
   });
   
   //eliminar una tarea por id
   router.get('/delete/:id', async (req, res, next) => {
     let { id } = req.params;
-    await Task.remove({_id: id});
+    await Task.deleteOne({_id: id});
     res.redirect('/');
   });
 
